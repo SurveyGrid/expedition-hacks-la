@@ -1,0 +1,41 @@
+<div>
+    <div class="grid">
+        <h1>Text Survey</h1>
+        <div class="grid__col--7">
+            <form class="form">
+                <label class="form__label--hidden" for="city">City</label>
+                <input class="form__input" type="text" id="city" ng-model="FormCtrl.survey.city" placeholder="City">
+
+                <label class="form__label--hidden" for="region">Region</label>
+                <input class="form__input" type="text" id="region" ng-model="FormCtrl.survey.region" placeholder="Region">
+
+                <label class="form__label--hidden" for="crop_type">Crop Type</label>
+                <input class="form__input" type="text" id="crop_type" ng-model="FormCtrl.survey.crop_type" placeholder="Crop Type: grains, vegetables, fruit or other">
+
+                <label class="form__label--hidden" for="crop_kind">Kind</label>
+                <input class="form__input" type="text" id="crop_kind" ng-model="FormCtrl.survey.crop_kind" placeholder="Kind">
+
+                <label class="form__label--hidden" for="total_acres">Total Acres of Farmland</label>
+                <input class="form__input" type="text" id="total_acres" ng-model="FormCtrl.survey.total_acres" placeholder="Total Acres of Farmland">
+
+                <label class="form__label--hidden" for="acre_irrigation">How many acres are Irrigated?</label>
+                <input class="form__input" type="text" id="acre_irrigation" ng-model="FormCtrl.survey.acre_irrigation" placeholder="How many acres are irrigated?">
+
+                <p>Is the current amount of rainfall better than last year?</p>
+                <div class="btn-group">
+                    <label class="btn btn-success" ng-model="FormCtrl.survey.rainfall_PastYr" uib-btn-radio="'True'" uncheckable>Yes</label>
+                    <label class="btn btn-success" ng-model="FormCtrl.survey.rainfall_PastYr" uib-btn-radio="'False'" uncheckable>No</label>
+                </div>
+                <hr>
+                <div>
+                    <input class="btn--default" type="submit" ng-click="FormCtrl.submitSurvey()">
+                    <input class="btn--default" type="button" value="location marker" ui-sref="app.addresses.list">
+
+                </div>
+            </form>
+        </div>
+        <div class="grid__col--4">
+        </div>
+    </div>
+</div>
+<div>
